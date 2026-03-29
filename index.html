@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>חידונים ושאלונים בקלי קלות</title>
+  <meta name="description" content="בניית שאלונים, חידונים ומשימות הערכה באמצעות בינה מלאכותית" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <div class="brand">חידונים ושאלונים בקלי קלות</div>
+      <nav class="menu" aria-label="ניווט ראשי">
+        <a href="#intro">פתיחה</a>
+        <a href="#tools">הכלים</a>
+        <a href="#summary">בחירת כלי</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="hero">
+      <div class="container">
+        <p class="eyebrow">מדריך אינטראקטיבי למורים ואנשי למידה</p>
+        <h1>חידונים ושאלונים בקלי קלות</h1>
+        <h2>בניית שאלונים, חידונים ומשימות הערכה באמצעות בינה מלאכותית</h2>
+        <div class="intro-card">
+          <p>שימוש בכלי בינה מלאכותית מאפשר מאפשר פיתוח ויצירת קוויזים, שאלונים ופעילויות הערכה איכותיות מתוך כל תוכן, נושא או רעיון – במהירות ובקלות.</p>
+          <p>במדריך זה תכירו כלים מובילים ליצירת שאלונים וחידות, תלמדו כיצד להשתמש ולהפיק תוצרים מגוונים, אינטראקטיביים, המבוססים על כל נושא או תוכן שתרצו. תלמדו לבחור את הכלי המתאים עבור כל משימה/צורך.</p>
+          <p>המדריך מיועד למורים, מדריכים ומפתחי למידה שמעוניינים לחסוך זמן, לדייק את ההוראה וליצור חוויית למידה אפקטיבית.</p>
+          <p>המדריך יעסוק בחמישה כלים המציעים מענים למגוון צרכים.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="tools-section">
+      <div class="container">
+        <div class="section-head">
+          <h2>הכלים במדריך</h2>
+          <p>כל יחידה מציגה כלי אחד, עם הסבר, שימושים, יתרונות, סרטון הדרכה ומצגת הסברה.</p>
+        </div>
+        <div id="toolButtons" class="tool-buttons"></div>
+        <div id="cards" class="cards"></div>
+      </div>
+    </section>
+
+    <section id="summary" class="summary-section">
+      <div class="container summary-card">
+        <h2>איך לבחור את הכלי המתאים</h2>
+        <ul>
+          <li>למידה עצמית → Quizlet</li>
+          <li>הוראה → MagicSchool</li>
+          <li>הערכה → QuestionWell</li>
+          <li>וידאו → Edpuzzle</li>
+          <li>פעילות אינטראקטיבית → Edcafe</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">AI</div>
+      <div class="footer-credit">נוצר ע&quot;י ריקי נחום</div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="מצגת הסברה">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel">
+      <div class="modal-header">
+        <h3 id="modalTitle">מצגת הסברה</h3>
+        <button class="icon-btn" id="closeModal" aria-label="סגירה">✕</button>
+      </div>
+      <div class="modal-body">
+        <iframe id="presentationFrame" title="מצגת הסברה" loading="lazy" allowfullscreen></iframe>
+        <div id="fallback" class="fallback hidden">
+          <p>לא ניתן היה לטעון את המצגת בתוך החלון הזה.</p>
+          <p>אפשר לפתוח אותה בחלון חדש או להוריד את קובץ ה-PDF.</p>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <a id="openExternal" class="btn btn-secondary" href="#" target="_blank" rel="noopener">פתח/י בחלון חדש</a>
+        <a id="downloadPresentation" class="btn btn-secondary" href="#" target="_blank" rel="noopener" download>הורדת מצגת</a>
+        <button id="backToPage" class="btn btn-primary">חזרה לדף הראשי</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
