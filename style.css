@@ -382,3 +382,15 @@ body{
   .nav{ flex-direction:column; align-items:flex-start; }
   .footer-inner{ flex-direction:column; }
 }
+.footer-content{
+  text-align:center;
+  padding:30px;
+}
+
+.footer-logo{
+  width:80px;
+  background:#fff;
+  border-radius:50%;
+  padding:10px;
+  margin-bottom:10px;
+}
