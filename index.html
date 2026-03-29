@@ -10,16 +10,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<footer>
-   <body>
+<body>
   <header class="topbar">
     <div class="container nav">
-      <div class="brand">חידונים ושאלונים בקלי קלות</div>
       <nav class="menu" aria-label="ניווט ראשי">
-        <a href="#intro">פתיחה</a>
-        <a href="#tools">הכלים</a>
-        <a href="#summary">בחירת כלי</a>
+        <a href="#tools">כלים</a>
+        <a href="#smart-choice">בחירת כלי חכמה</a>
       </nav>
+      <a href="#" class="header-logo-link" aria-label="חזרה לראש העמוד">
+        <img src="לוגו שקוף אתר שאלונים.png" alt="לוגו האתר" class="header-logo" />
+      </a>
     </div>
   </header>
 
@@ -38,35 +38,56 @@
       </div>
     </section>
 
+    <section id="smart-choice" class="smart-choice-section">
+      <div class="container smart-choice-box">
+        <h2>איך לבחור את הכלי המתאים</h2>
+        <div class="smart-row">
+          <div class="smart-card">
+            <div class="smart-icon">📖</div>
+            <div class="smart-label">למידה עצמית</div>
+            <div class="smart-tool">Quizlet ←</div>
+          </div>
+          <div class="smart-card">
+            <div class="smart-icon">🧠</div>
+            <div class="smart-label">הוראה</div>
+            <div class="smart-tool">MagicSchool ←</div>
+          </div>
+          <div class="smart-card">
+            <div class="smart-icon">✅</div>
+            <div class="smart-label">הערכה</div>
+            <div class="smart-tool">QuestionWell ←</div>
+          </div>
+          <div class="smart-card">
+            <div class="smart-icon">🎥</div>
+            <div class="smart-label">וידאו</div>
+            <div class="smart-tool">Edpuzzle ←</div>
+          </div>
+          <div class="smart-card">
+            <div class="smart-icon">✨</div>
+            <div class="smart-label">פעילות אינטראקטיבית</div>
+            <div class="smart-tool">Edcafe ←</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="tools" class="tools-section">
       <div class="container">
         <div class="section-head">
           <h2>הכלים במדריך</h2>
           <p>כל יחידה מציגה כלי אחד, עם הסבר, שימושים, יתרונות, סרטון הדרכה ומצגת הסברה.</p>
         </div>
-        <div id="toolButtons" class="tool-buttons"></div>
         <div id="cards" class="cards"></div>
-      </div>
-    </section>
-
-    <section id="summary" class="summary-section">
-      <div class="container summary-card">
-        <h2>איך לבחור את הכלי המתאים</h2>
-        <ul>
-          <li>למידה עצמית → Quizlet</li>
-          <li>הוראה → MagicSchool</li>
-          <li>הערכה → QuestionWell</li>
-          <li>וידאו → Edpuzzle</li>
-          <li>פעילות אינטראקטיבית → Edcafe</li>
-        </ul>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="footer-logo">AI</div>
-      <div class="footer-credit">נוצר ע&quot;י ריקי נחום</div>
+      <div class="footer-logo-wrap">
+        <img src="לוגו שקוף אתר שאלונים.png" alt="לוגו האתר" class="footer-logo"/>
+      </div>
+      <div class="footer-credit">האתר נוצר ע&quot;י ריקי נחום</div>
     </div>
   </footer>
 
@@ -85,20 +106,13 @@
         </div>
       </div>
       <div class="modal-actions">
-        <a id="openExternal" class="btn btn-secondary" href="#" target="_blank" rel="noopener">פתח/י בחלון חדש</a>
-        <a id="downloadPresentation" class="btn btn-secondary" href="#" target="_blank" rel="noopener" download>הורדת מצגת</a>
-        <button id="backToPage" class="btn btn-primary">חזרה לדף הראשי</button>
+        <a id="openExternal" class="btn btn-soft" href="#" target="_blank" rel="noopener">פתח/י בחלון חדש</a>
+        <a id="downloadPresentation" class="btn btn-soft" href="#" target="_blank" rel="noopener" download>הורדת מצגת</a>
+        <button id="backToPage" class="btn btn-pink">חזרה לדף הראשי</button>
       </div>
     </div>
   </div>
-     
-  <footer>
-    <div class="footer-content">
-      <img src="לוגו שקוף אתר שאלונים.png" class="footer-logo" />
-      <p>האתר נוצר ע"י ריקי נחום</p>
-    </div>
-  </footer>
-<script src="script.js"></script>
 
+  <script src="script.js"></script>
 </body>
 </html>

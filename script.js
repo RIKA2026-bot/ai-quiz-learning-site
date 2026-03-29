@@ -67,7 +67,6 @@ const tools = [
 ];
 
 const cards = document.getElementById("cards");
-const toolButtons = document.getElementById("toolButtons");
 const modal = document.getElementById("modal");
 const modalTitle = document.getElementById("modalTitle");
 const frame = document.getElementById("presentationFrame");
@@ -76,12 +75,6 @@ const openExternal = document.getElementById("openExternal");
 const downloadPresentation = document.getElementById("downloadPresentation");
 const closeModalBtn = document.getElementById("closeModal");
 const backToPage = document.getElementById("backToPage");
-
-function renderToolButtons() {
-  toolButtons.innerHTML = tools.map((tool, index) => `
-    <a href="#tool-${index + 1}">${tool.name}</a>
-  `).join("");
-}
 
 function renderCards() {
   cards.innerHTML = tools.map((tool, index) => `
@@ -113,8 +106,8 @@ function renderCards() {
         </div>
 
         <div class="actions">
-          <button class="btn btn-primary" data-presentation="${index}">מצגת הסברה</button>
-          <a class="btn btn-secondary" href="${tool.toolUrl}" target="_blank" rel="noopener">מעבר לכלי</a>
+          <button class="btn btn-pink" data-presentation="${index}">מצגת הסברה</button>
+          <a class="btn btn-soft" href="${tool.toolUrl}" target="_blank" rel="noopener">מעבר לכלי</a>
         </div>
       </div>
     </article>
@@ -134,11 +127,9 @@ function openPresentation(index) {
 
   if (tool.presentationDownloadUrl) {
     downloadPresentation.href = tool.presentationDownloadUrl;
-    downloadPresentation.classList.remove("btn-disabled");
     downloadPresentation.setAttribute("download", "");
   } else {
     downloadPresentation.href = "#";
-    downloadPresentation.classList.add("btn-disabled");
     downloadPresentation.removeAttribute("download");
   }
 
@@ -167,5 +158,4 @@ document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && modal.classList.contains("show")) closeModal();
 });
 
-renderToolButtons();
 renderCards();
